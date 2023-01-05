@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobrar Fotos</title>
+    <link rel="stylesheet" href="lib/bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-sm-4">
+                <form class="shadow rounded p-4">
+                    <div class="form-group">
+                      <label for="">Cantidad de Fotos</label>
+                      <input type="number" name="" id="cantidad_fotos" class="form-control" placeholder="" aria-describedby="helpId" min="1">
+                    </div>
+                    <div class="form-gorup">
+                      <label for="">Tipo de foto:</label>
+                      <select name="" id="seleccion" class="form-control">
+                         S <option value="">Selecciona el tipo de foto</option>
+                          <option value="color">Color</option>    
+                          <option value="bn">Blanco y negro</option>   
+                          
+                      </select>
+                    </div>
+                    <div class="form-group mt-3 text-center" >
+                        <h3 class="text-left">Medidas</h3>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="radio" id="3x4" name="tamanio" value="3x4">
+                                    <label for="3x4">3x4</label>
+                                </div>
+                                <div class="col">
+                                    <input type="radio" id="5x7" name="tamanio" value="5x7">
+                                    <label for="5x7">5x7</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="radio" id="4x6" name="tamanio" value="4x6">
+                                    <label for="4x6">4x6</label>      
+                                </div>
+                                <div class="col">
+                                    <input type="radio" id="6x8" name="tamanio" value="6x8">
+                                    <label for="6x8">6x8</label><br>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                
+                    <div class="form-group">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col align-self-center">
+                                    <span id="boton_aceptar" class="btn btn-primary w-100">Aceptar</span>
+                                </div>
+                                <div class="col">
+                                    <label for="">Cantidad a Pagar</label>
+                                    <input type="text" name="total" id="total" class="form-control" placeholder="" readonly aria-describedby="helpId">
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="text-center">
+                        <span class="btn btn-primary" id="boton_limpiar">Limpiar</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABLA -->
+    <div class="container mt-5" id="tabla_datos_marcador">
+        <div class="row">
+            <div class="col">
+                <table class="table" id="miTabla">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cantidad</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mostrar_tabla">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- FIN TABLA -->
+    <script src="lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <script src="lib/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/sweetalert/sweetalert2.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
